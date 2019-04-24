@@ -6,9 +6,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+   background: url('/fondo.jpeg');
+   /* background: url('/ws.png');     */
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.true 
+{
+  display: none !important;
+}
+
+ 
+.ocultar {
+  display: none !important;
+}
+

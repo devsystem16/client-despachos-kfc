@@ -3,9 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "datatables.net": "^1.10.19",
+    "izitoast": "^1.4.0",
+    "jquery": "^3.4.0",
+    "mdbreact": "^4.12.0",
+    "mdbvue": "^5.1.2",
+    "mui-datatables": "^2.0.0-beta.59",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-data-components": "^1.2.0",
+    "react-data-table-component": "^1.4.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-redux": "^7.0.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "socket.io-client": "^2.2.0",
+    "styled-components": "^4.2.0",
+    "sweetalert2": "^8.8.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -13,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
+  "eslintConfig": { 
     "extends": "react-app"
   },
   "browserslist": [
@@ -21,5 +37,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "react-router-dom": "^5.0.0",
+    "react-to-print": "^2.1.1"
+  }
 }

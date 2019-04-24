@@ -1,0 +1,137 @@
+.title-table {
+  text-align: center;
+  background-color: white;
+  color: #2e6e9e;
+  border: 1px black dotted;
+  font-weight: bold;
+  background-color: rgb(223, 237, 247);
+}
+
+.MUIDataTable-tableRoot-2 {
+  background-color: white;
+  cursor: pointer;
+}
+
+.MuiTableRow-head-121 {
+  height: 0;
+}
+
+.MUIDataTable-tableRoot-2 tbody tr td {
+  padding: 0px;
+}
+
+.MUIDataTable-tableRoot-2 thead th {
+  /* padding: 0px 5px 0px 5px; */
+  padding: 0px;
+
+  color: white;
+  font-weight: bold;
+  /* background-color: #212529; */
+  background-color: rgb(223, 237, 247);
+  color: #2e6e9e;
+  height: 0px;
+  font-weight: normal;
+  text-align: center;
+}
+.title-1 {
+  color: white;
+}
+
+.MUIDataTable-tableRoot-2 tbody tr td {
+  /* margin: 0px; */
+  text-align: center;
+}
+.MUIDataTable-tableRoot-2 tbody tr td:active {
+  /* margin: 0px; */
+  color: #2e6e9e;
+ 
+}
+.MUIDataTable-responsiveScroll-3 {
+  max-height: inherit;
+  height: 4000px;
+}
+
+.col-md-8 div.MUIDataTable-responsiveScroll-3 {
+  margin: 0px;
+  max-height: 450px;
+}
+
+.MUIDataTable-tableRoot-2 tbody tr td:first-child {
+  /* margin: 0px; */
+  display: none;
+}
+
+.MUIDataTable-tableRoot-2 thead th:first-child {
+  /* margin: 0px; */
+  display: none;
+}
+
+.MUIDataTable-tableRoot-2 tbody tr {
+  height: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.MUIDataTable-tableRoot-2 thead tr {
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+/* .MUIDataTable-tableRoot-2 thead tr th {
+   padding: 0px 0px 0px 20px;  
+  */
+
+.fondo {
+  background-color: white;
+
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 770px) {
+  .topes {
+    margin-top: 5px;
+  }
+  .fondo {
+    margin-bottom: 8px;
+  }
+
+  .MUIDataTable-tableRoot-2 .MuiSvgIcon-root-99 {
+    margin: 8px; 
+ }
+
+  .title-1 {
+    color: black;
+  }
+  body {
+    background: url("/ws.png");
+  }
+}
+
+.MUIDataTable-tableRoot-2 .MuiTableCell-root-132:last-child {
+  padding-right: 0px;
+}
+.MUIDataTable-tableRoot-2 .MuiIconButton-root-90 {
+  padding: 0px;
+}
+
+.MUIDataTable-tableRoot-2 .MuiSvgIcon-root-99 {
+   margin: 3px; 
+}
+
+/* .MUIDataTable-tableRoot-2 thead tr th {
+    font-weight: bold;  
+  */
+
+.MUIDataTable-tableRoot-2 .MUIDataTableHeadCell-toolButton-161 {
+  padding: 25px;
+}
+
+.table {
+  width: 100%;
+  border: 0px;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+
+ 
