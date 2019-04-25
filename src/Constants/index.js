@@ -24,6 +24,7 @@ export const API_POST_NOTACREDITO = _http + "/api/notacredito/";
 export const API_POST_QUITAR_ASIGNACION = _http + "/api/quitarasignacion/";
 export const API_GET_ESTADO_FACTURA = _http + "/api/app/";
 export const API_POST_INSERTAR_AUDITORIA= _http + "/api/app/";
+export const API_GET_OPCIONES_ANULACION = _http + "/api/anulacion/";
 
 export const API_POST_OBTENER_TOKEN_AGREGADOR=    "https://backend.kfc.com.ec/api/authenticate/administrator/";
 export const API_POST_INSERTA_AUDITORIA_KFC=    "https://backend.kfc.com.ec/api/authenticate/administrator/";

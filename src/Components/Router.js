@@ -54,7 +54,8 @@ class Router extends Component {
       htmlDocumento: "<center>Sin datos</center>",
       smModalError: false,
       counter: null,
-      number: 1
+      number: 1,
+      opcionesAnulacion : []
     };
   }
 
@@ -72,9 +73,21 @@ class Router extends Component {
       localStorage.setItem("rst_id", foo);
     }
 
+    // alert(JSON.stringify(err))
     const api = new Api();
     api.obtenerConfiguraciones()
+
+
+    api.wsObtenerOpcionesAnulacion().then(response =>{
+
+      this.setState({
+        opcionesAnulacion: response.data
+      })
+     
+    })
+
     this.ObtenerWsPeriodo();
+
     this.getDespachos();
     this.obtenerJsonMotorizados();
 
@@ -122,8 +135,11 @@ class Router extends Component {
   };
 
   ObtenerWsPeriodo = () => {
+
+
     const api = new Api();
     api.ObtenerWsPeriodo().then(response => {
+
       if (response.data.estado !== 1) {
         if (response.data.estado === 3) {
           this.setState({
@@ -143,7 +159,8 @@ class Router extends Component {
       this.setState({
         jsonInfoPeriodo: response.data
       });
-    });
+    })
+
   };
 
   ObtenerDatoDespachos = parametro => {
@@ -549,6 +566,7 @@ class Router extends Component {
   render() {
     let smClose = () => this.setState({ smShow: false });
 
+   
     return (
       <BrowserRouter>
         <div className="container-fluid">
@@ -594,6 +612,7 @@ class Router extends Component {
         />
 
         <Anulacion
+        opcionesAnulacion = {this.state.opcionesAnulacion}
           modalAnulacion={this.state.modalAnulacion}
           fn_CloseModalAnulacion={this.fn_CloseModalAnulacion}
           fn_anularDespacho={this.fn_anularDespacho}

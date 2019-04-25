@@ -10,7 +10,8 @@ import {
   API_POST_INSERTA_AUDITORIA_KFC,
   API_POST_ACTUALIZA_ESTADO_AGREGADORES,
   API_GET_ID_BRING,
-  API_POST_NOTIFICA_BRINGG
+  API_POST_NOTIFICA_BRINGG,
+  API_GET_OPCIONES_ANULACION
 } from "../Constants/";
 
 export default class {
@@ -62,7 +63,15 @@ export default class {
       });
   }
 
+  wsObtenerOpcionesAnulacion() {
+    return axios
+      .get(API_GET_OPCIONES_ANULACION)
+      .then(response => response)
+      .catch(error => error);
+  }
+
   ObtenerWsPeriodo() {
+    
     return axios
       .get(`${API_GET_PERIODO}${localStorage.getItem("rst_id")}`)
       .then(response => response)

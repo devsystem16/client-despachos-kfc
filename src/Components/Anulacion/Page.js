@@ -10,7 +10,7 @@ import Slide from "@material-ui/core/Slide";
 
 import TextField from "@material-ui/core/TextField";
 
-import {  Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
@@ -45,18 +45,33 @@ class Page extends Component {
       comentario: this.state.text_motivo
     };
 
+
+
     this.setState({
-      text_motivo :""
+      text_motivo: ""
     })
 
     this.props.fn_anularDespacho(parametros);
   };
 
+
+  cargarOpcionesAnulacion = () => {
+    const opcionesAnulacion = this.props.opcionesAnulacion
+    return (<React.Fragment>
+      {Object.keys(opcionesAnulacion).map(opcion => (
+        <option value={this.props.opcionesAnulacion[opcion].Cod_Motivo}>
+         {this.props.opcionesAnulacion[opcion].Descripcion}
+         </option>
+      ))}
+    </React.Fragment>
+    )
+  }
+
   render() {
     var open = this.props.modalAnulacion;
     return (
       <div>
- 
+
         <Dialog
           open={open}
           TransitionComponent={Transition}
@@ -68,29 +83,30 @@ class Page extends Component {
           <DialogTitle id="alert-dialog-slide-title">{"Anulación"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
-               <div className="row">
-         
+              <div className="row">
+
                 <Form.Group controlId="exampleForm.ControlSelect1">
                   <Form.Label>Motivo</Form.Label>
                   <Form.Control as="select" ref={this.selectmotivo}>
-                    <option value="1">Pedido Falso</option>
-                    <option value="2">Aumento de Pedido</option>
+                    {this.cargarOpcionesAnulacion()}
+                    {/* <option value="1">Pedido Falso</option>
+                    <option value="2">Aumento de Pedido</option> */}
                   </Form.Control>
                 </Form.Group>
               </div>
 
-             <div className="row">
+              <div className="row">
                 <TextField
                   id="outlined-textarea"
                   label="Comentario"
                   placeholder="Ingrese un comentario"
                   multiline
-                  margin="normal" 
+                  margin="normal"
                   variant="outlined"
                   value={this.state.text_motivo}
                   onChange={this.handleChangetext_motivo("text_motivo")}
                 />
-              </div>    
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
